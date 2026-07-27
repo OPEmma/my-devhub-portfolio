@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./Header.jsx";
 import Hero from "./Hero.jsx";
 import Dashboard from "./Dashboard.jsx";
 import { supabase } from "./supabaseClient";
@@ -171,7 +170,7 @@ function App() {
     return (
       <div className="relative min-h-screen overflow-x-hidden bg-white dark:bg-gray-950">
         {/* We pass down database values right into your custom view templates */}
-        <Header profile={profileData} />
+        
         <Hero
           profile={profileData}
           customProjects={projectData}
@@ -190,7 +189,7 @@ function App() {
           path="/"
           element={
             <div className="relative min-h-screen bg-white dark:bg-gray-950">
-              <Header profile={null} />
+              
               <Hero profile={null} customProjects={null} isSubdomain={false} />
             </div>
           }
